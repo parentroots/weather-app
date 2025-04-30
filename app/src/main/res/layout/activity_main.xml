@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/layout_bg"
+    >
+    <LinearLayout
+        android:id="@+id/header_title"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:gravity="center_vertical"
+        android:weightSum="3"
+        >
+
+        <ImageView
+            android:id="@+id/goBackButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/back"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Today Forecast"
+            android:textColor="#ffffff"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_weight="2"
+            android:layout_marginLeft="10dp"
+
+            />
+
+    </LinearLayout>
+
+
+
+    <!--===============================-->
+    <!--===============================-->
+    <!--===============================-->
+
+    <HorizontalScrollView
+        android:id="@+id/dailyWeatherView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/header_title"
+        android:scrollbars="none"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:id="@+id/fridayLayout"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="3"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_horizontal"
+                android:background="@drawable/curv_bg_2"
+
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+
+                    android:src="@drawable/cloudyicon"
+                    android:layout_weight="1"
+                    />
+                <TextView
+                    android:id="@+id/fridayTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="28.5 C"
+                    android:textSize="18sp"
+                    android:textColor="#ffff"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="FRIDAY"
+                    android:textSize="18sp"
+                    android:textColor="#ffff"
+
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/saturdayLyout"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="3"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_horizontal"
+                android:background="@drawable/curv_bg_2"
+
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/cloudyicon"
+                    android:layout_weight="1"
+                    />
+                <TextView
+                    android:id="@+id/saturdayTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="28.5 C"
+                    android:textSize="18sp"
+                    android:textColor="#ffff"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="SATURDAY"
+                    android:textSize="18sp"
+                    android:textColor="#ffff"
+
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/sundayLayout"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="3"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_horizontal"
+                android:background="@drawable/curv_bg_2"
+
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+
+                    android:src="@drawable/cloudyicon"
+                    android:layout_weight="1"
+                    />
+                <TextView
+                    android:id="@+id/sundayTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="28.5 C"
+                    android:textSize="18sp"
+                    android:textColor="#ffff"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="SUNDAY"
+                    android:textSize="18sp"
+                    android:textColor="#ffff"
+
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/mondayLayout"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="3"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_horizontal"
+                android:background="@drawable/curv_bg_2"
+
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+
+                    android:src="@drawable/cloudyicon"
+                    android:layout_weight="1"
+                    />
+                <TextView
+                    android:id="@+id/monedayTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="26.7 C"
+                    android:textSize="18sp"
+                    android:textColor="#ffff"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="MONDAY"
+                    android:textSize="18sp"
+                    android:textColor="#ffff"
+
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/tuesdayLayout"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="3"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_horizontal"
+                android:background="@drawable/curv_bg_2"
+
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+
+                    android:src="@drawable/cloudyicon"
+                    android:layout_weight="1"
+                    />
+                <TextView
+                    android:id="@+id/tuesdayTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="25.4 C"
+                    android:textSize="18sp"
+                    android:textColor="#ffff"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="TUESDAY"
+                    android:textSize="18sp"
+                    android:textColor="#ffff"
+
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/wednesdayLayout"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="3"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_horizontal"
+                android:background="@drawable/curv_bg_2"
+
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+
+                    android:src="@drawable/cloudyicon"
+                    android:layout_weight="1"
+                    />
+                <TextView
+                    android:id="@+id/wednesdayTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="27.5 C"
+                    android:textSize="18sp"
+                    android:textColor="#ffff"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="WEDNESDAY"
+                    android:textSize="15sp"
+                    android:textColor="#ffff"
+
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/thursdayLayout"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="3"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_horizontal"
+                android:background="@drawable/curv_bg_2"
+
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+
+                    android:src="@drawable/cloudyicon"
+                    android:layout_weight="1"
+                    />
+                <TextView
+                    android:id="@+id/thursdayTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="29.6 C"
+                    android:textSize="18sp"
+                    android:textColor="#ffff"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="THURSDAY"
+                    android:textSize="18sp"
+                    android:textColor="#ffff"
+
+                    />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+    <!--===============================-->
+    <!--===============================-->
+    <!--===============================-->
+
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="340dp"
+        android:layout_height="300dp"
+        android:layout_below="@id/dailyWeatherView"
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="20dp"
+        android:layout_marginTop="20dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/layout_bg"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:layout_width="140dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/cloudyicon"
+                    android:layout_marginLeft="15dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:id="@+id/temperatureText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MAX : "
+                        android:textColor="#ffffff"
+                        android:textSize="30sp"
+                        android:layout_gravity="center_vertical"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        />
+
+                    <TextView
+                        android:id="@+id/temperatureTextMin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MIN  : "
+                        android:textColor="#ffffff"
+                        android:textSize="30sp"
+                        android:layout_gravity="center_vertical"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/feelWeatherText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mostly Warm Weather"
+                android:textSize="30sp"
+                android:textColor="#ffffff"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Today Weather    >>>>>>"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+               android:layout_marginTop="15dp"
+                android:weightSum="3"
+                >
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/curv_bg_2"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    >
+                    <TextView
+                        android:id="@+id/humidityText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="28.8C"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp"
+                        />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/humidity"
+                        />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/curv_bg_2"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    >
+                    <TextView
+                        android:id="@+id/windText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="28.8C"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp"
+                        />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/storm"
+                        />
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/curv_bg_2"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp"
+                    >
+                    <TextView
+                        android:id="@+id/sealevelText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="28.8C"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp"
+                        />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/sealevel"
+                        />
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/curv_bg"
+
+        >
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="110dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical"
+            android:scrollbars="none"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="5dp"
+                    app:cardCornerRadius="10dp"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/layout_bg_2"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:id="@+id/sunriseText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="20sp"
+                            android:textColor="#ffffff"
+                            />
+
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="5dp"
+                    app:cardCornerRadius="10dp"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/layout_bg_2"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        >
+                        <TextView
+                            android:id="@+id/sunsetText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="20sp"
+                            android:textColor="#ffffff"
+                            />
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="5dp"
+                    app:cardCornerRadius="10dp"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/layout_bg_2"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+
+=
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>
